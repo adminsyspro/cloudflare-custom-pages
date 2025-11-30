@@ -13,18 +13,16 @@ export interface ChallengePageTranslation extends PageTranslation {}
 
 export const blockPageTranslations: Record<string, BlockPageTranslation> = {
   ip: {
-    title: "Your IP is blocked",
-    message: "The owner of this website has banned your IP address.",
+    title: "Access Denied",
+    message: "Your IP address is not allowed to access this website.",
   },
   waf: {
-    title: "You're blocked by WAF",
-    message:
-      "The Cloudflare WAF (Web Application Firewall) has blocked your request.",
+    title: "Access Denied",
+    message: "This request has been blocked for security reasons.",
   },
   "rate-limit": {
-    title: "Rate Limit Block - 429",
-    message:
-      "You have made too many requests. Please wait a moment before trying again.",
+    title: "Access Denied",
+    message: "Too many requests. Please wait a moment and try again.",
   },
 } as const;
 
@@ -32,12 +30,11 @@ export const errorPageTranslations: Record<string, ErrorPageTranslation> = {
   "500s": {
     title: "Internal Server Error",
     message:
-      "Please try again later, there was an unexpected error on the site.",
+      "Please try again later. An unexpected error occurred on the server.",
   },
   "1000s": {
     title: "DNS Resolution Error",
-    message:
-      "The requested hostname could not be resolved. Don't worry, it's not your problem.",
+    message: "The requested hostname could not be resolved.",
   },
 } as const;
 
@@ -46,20 +43,19 @@ export const challengePageTranslations: Record<
   ChallengePageTranslation
 > = {
   interactive: {
-    title: "Interactive Challenge",
-    message: "Please complete this CAPTCHA to access the site.",
+    title: "Security Check",
+    message: "Please complete the CAPTCHA to access this website.",
   },
   managed: {
-    title: "I'm Under Attack Mode™",
-    message: "Complete CAPTCHA to proceed. This is a general security check.",
+    title: "Security Check",
+    message: "Please complete the CAPTCHA to access this website.",
   },
   country: {
-    title: "Challenge",
-    message:
-      "Additional verification is required for visitors from your Country/Region.",
+    title: "Security Check",
+    message: "Additional verification is required to access this website.",
   },
   javascript: {
-    title: "Please wait...",
+    title: "Security Check",
     message:
       "Please wait a moment while our security system verifies your request.",
   },
@@ -73,12 +69,12 @@ export const interfaceTranslations: Record<string, InterfaceTranslations> = {
     message: "Connection Tracking",
   },
   "network-status-you": {
-    message: "You",
+    message: "BROWSER",
   },
   "network-status-cdn": {
-    message: "CDN",
+    message: "CLOUDFLARE",
   },
   "network-status-origin": {
-    message: "Origin",
+    message: "ORIGIN",
   },
 } as const;

@@ -11,7 +11,6 @@ export const siteConfig = {
     },
   ],
   links: {
-    // 设置为 "#" 则不会跳转到其他页面。
     github: "https://github.com/Alice39s/cloudflare-custom-pages-nextjs",
     docs: "https://github.com/Alice39s/cloudflare-custom-pages-nextjs?tab=readme-ov-file#-usage",
   },

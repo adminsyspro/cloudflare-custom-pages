@@ -3,6 +3,7 @@
 import { Icon } from "@/components/ui/icon";
 import { challengePageTranslations } from "@/config/i18n";
 import type { ChallengePageConfig } from "@/config/routes";
+import Image from "next/image";
 import { CFCard } from "./ui/CFCard";
 import { CFCardWrap } from "./ui/CFCardWrapper";
 import { NetworkStatusBox } from "./ui/NetworkStatusBox";
@@ -20,12 +21,12 @@ export const CaptchaBox = ({
       <CFCard
         title={translation.title}
         message=""
-        subtitle="Security Check"
+        subtitle="Please wait..."
         icon={<Icon name={icon} className="h-6 w-6 text-white" />}
         headerClassName="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-900/10"
         scheme="primary"
       >
-        <div className="space-y-6">
+        <div className="space-y-6 text-center">
           {translation.message && (
             <div className="flex items-center gap-2 -mt-6 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg border border-blue-100 dark:border-blue-900/30">
               <Icon
@@ -55,6 +56,18 @@ export const CaptchaBox = ({
           <NetworkStatusWrapper>
             <NetworkStatusBox {...networkStatus} />
           </NetworkStatusWrapper>
+
+          {/* Footer avec le logo Cloudflare en PNG */}
+          <div className="pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-center">
+            {" "}
+            <Image
+              src="/cloudflare-logo.png"
+              alt="Cloudflare"
+              width={140} // ajuste si besoin
+              height={28} // juste pour le ratio, Next en a besoin
+              className="opacity-80"
+            />
+          </div>
         </div>
       </CFCard>
     </CFCardWrap>

@@ -4,6 +4,7 @@ import { Icon } from "@/components/ui/icon";
 import { errorPageTranslations, interfaceTranslations } from "@/config/i18n";
 import type { ErrorPageConfig } from "@/config/routes";
 import { Chip } from "@heroui/react";
+import Image from "next/image";
 import { CFCard } from "./ui/CFCard";
 import { CFCardWrap } from "./ui/CFCardWrapper";
 import { NetworkStatusBox } from "./ui/NetworkStatusBox";
@@ -22,10 +23,13 @@ export const ErrorBox = ({
     <CFCardWrap>
       <CFCard
         title={translation.title}
-        message={translation.message}
+        message={
+          <span className="block text-center">{translation.message}</span>
+        }
+        //message={translation.message}
         subtitle={
           <Chip variant="flat" color="danger" size="sm">
-            Error {code}
+            HTTP Error {code}
           </Chip>
         }
         icon={<Icon name={icon} className="text-white w-6 h-6" />}
@@ -63,6 +67,18 @@ export const ErrorBox = ({
                   }}
                 />
               </div>
+            </div>
+
+            {/* Footer avec le logo Cloudflare en PNG */}
+            <div className="pt-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-center">
+              {" "}
+              <Image
+                src="/cloudflare-logo.png"
+                alt="Cloudflare"
+                width={140} // ajuste si besoin
+                height={28} // juste pour le ratio, Next en a besoin
+                className="opacity-80"
+              />
             </div>
           </div>
         )}

@@ -47,7 +47,7 @@ export const types = {
 export const blockPages: Record<BlockType, BlockPageConfig> = {
   ip: {
     type: "ip",
-    code: "1006",
+    code: "403",
     icon: "shield-ban",
     networkStatus: {
       clientStatus: "error",
@@ -56,7 +56,7 @@ export const blockPages: Record<BlockType, BlockPageConfig> = {
   },
   waf: {
     type: "waf",
-    code: "1010",
+    code: "403",
     icon: "shield",
     networkStatus: {
       clientStatus: "error",

@@ -38,13 +38,13 @@ export const NetworkStatusBox = ({
         <NetworkNode
           label={interfaceTranslations["network-status-you"].message}
           status={clientStatus}
-          className="w-[100px] sm:w-[120px]"
+          className="w-[150px] sm:w-[160px]"
         />
         <NetworkLine status={clientStatus} />
         <NetworkNode
           label={interfaceTranslations["network-status-cdn"].message}
           status={edgeStatus}
-          className="w-[100px] sm:w-[120px]"
+          className="w-[150px] sm:w-[160px]"
         />
 
         {originStatus && (
@@ -56,7 +56,7 @@ export const NetworkStatusBox = ({
                 interfaceTranslations["network-status-origin"].message
               }
               status={originStatus}
-              className="w-[100px] sm:w-[120px]"
+              className="w-[150px] sm:w-[160px]"
             />
           </>
         )}

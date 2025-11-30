@@ -102,8 +102,6 @@ export const FooterContent = memo(() => {
               isGeo={true}
             />
             <Separator />
-            <InfoItem label="IP" value="::CLIENT_IP::" />
-            <Separator />
             <InfoItem label="Ray ID" value="::RAY_ID::" />
           </div>
         </CardBody>
