@@ -36,7 +36,7 @@ export const BlockBox = ({
           </Chip>
         }
         icon={<Icon name={icon} className="h-6 w-6 text-white" />}
-        headerClassName="bg-gradient-to-br from-red-50 to-red-100 dark:from-red-950 dark:to-gray-900"
+        headerClassName="bg-gradient-to-br from-red-50 to-red-100"
         scheme="danger"
       >
         <div className="space-y-6">
