@@ -3,7 +3,6 @@
 import { Icon } from "@/components/ui/icon";
 import { challengePageTranslations } from "@/config/i18n";
 import type { ChallengePageConfig } from "@/config/routes";
-import Image from "next/image";
 import { CFCard } from "./ui/CFCard";
 import { CFCardWrap } from "./ui/CFCardWrapper";
 import { NetworkStatusBox } from "./ui/NetworkStatusBox";
@@ -21,12 +20,12 @@ export const CaptchaBox = ({
       <CFCard
         title={translation.title}
         message=""
-        subtitle="Please wait..."
+        subtitle="Security Check"
         icon={<Icon name={icon} className="h-6 w-6 text-white" />}
         headerClassName="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/30 dark:to-blue-900/10"
         scheme="primary"
       >
-        <div className="space-y-6 text-center">
+        <div className="space-y-6">
           {translation.message && (
             <div className="flex items-center gap-2 -mt-6 p-4 bg-blue-50 dark:bg-blue-900/30 rounded-lg border border-blue-100 dark:border-blue-900/30">
               <Icon
