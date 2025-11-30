@@ -38,7 +38,7 @@ export const NetworkStatusBox = ({
         <NetworkNode
           label={interfaceTranslations["network-status-you"].message}
           status={clientStatus}
-          className="w-[150px] sm:w-[160px]"
+          className="w-[150px] sm:w-[140px]"
         />
         <NetworkLine status={clientStatus} />
         <NetworkNode
@@ -56,7 +56,7 @@ export const NetworkStatusBox = ({
                 interfaceTranslations["network-status-origin"].message
               }
               status={originStatus}
-              className="w-[150px] sm:w-[160px]"
+              className="w-[150px] sm:w-[150px]"
             />
           </>
         )}
